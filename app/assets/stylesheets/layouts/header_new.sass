@@ -1,0 +1,49 @@
+.page-header
+  position: relative
+  z-index: 1
+  background-color: $background-color
+  box-shadow: 0px 1px 11px 0px rgba(0, 0, 0, 0.1)
+
+  > .container
+    height: 70px
+    display: flex
+    align-items: center
+    padding: 0 $layout-spacing
+
+    > *
+      flex: 1
+
+    > .menu-button, > .logo
+      position: relative
+
+    > .menu-button
+      top: 2px
+      opacity: 0.8
+      transition: opacity 0.2s ease
+
+      &:hover
+        opacity: 1
+
+    > .logo
+      top: 3px
+      text-align: center
+
+    > .user-info
+      text-align: right
+
+      > .signin-link, > .signup-link
+        color: $hilight-color
+        font-size: $smaller-font-size
+        font-weight: $semi-bold
+        padding: 8px $internal-spacing
+        text-decoration: none
+        border: solid 1px #c4ccd2
+        border-radius: $control-border-radius
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05)
+        transition: background-color 0.3s ease
+
+        &:hover
+          background-color: #c4ccd2
+
+      > .signup-link
+        margin-left: $internal-spacing

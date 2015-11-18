@@ -1,0 +1,13 @@
+.content-adapter
+  = render 'shared/breadcrumbs'
+
+  .main-column
+    section
+      h1.title Редактирование бизнесхака
+      - props = { initialState: @frontend_initial_state, businesshack: @businesshack_attributes }
+      = react_component 'BusinesshackForm', props
+
+  .side-column
+    == concept 'content_author/cell', @businesshack.author
+    - props = { businesshack: @businesshack_attributes, tags: @tag_names }
+    = react_component 'BusinesshackTagsForm', props

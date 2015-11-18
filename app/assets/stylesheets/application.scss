@@ -1,0 +1,53 @@
+// This variable $rails is used by bootstrap-custom so that fonts are loaded slightly differently
+// with Rails vs. the Webpack Dev Server
+$rails: true;
+
+// Those scss files are located under client/assets/stylesheets,
+// which has been added to the Rails asset pipeline search path.
+// See config/application.rb.
+@import 'settings';
+@import 'mixins';
+
+@import 'layouts/application';
+@import 'layouts/header';
+
+@import 'font-awesome';
+@import 'lightbox';
+@import 'bootstrap';
+@import 'growlyflash';
+
+@import 'project/**/*';
+
+@import 'flaticon';
+
+@import 'concepts/content_author';
+@import 'components/form_controls';
+@import 'components/tags';
+@import 'components/auth_form';
+@import 'components/modal';
+@import 'components/skill_badge';
+@import 'components/user_stats';
+@import 'components/help_block';
+@import 'components/posts_section';
+@import 'components/skills_report_form';
+@import 'components/user_resources';
+@import 'components/skill_groups';
+@import 'components/skill_info';
+@import 'components/user_skills';
+@import 'components/skills_map';
+@import 'components/skill_unlock_form';
+@import 'components/businesshacks';
+@import 'components/businesshack';
+@import 'components/scribe_editor';
+@import 'components/comments';
+@import 'components/loader';
+
+@import 'sir-trevor-css/sir-trevor-icons';
+@import 'sir-trevor-css/sir-trevor';
+
+@font-face{
+  font-family: 'FontAwesome';
+  src: asset-data-url("fontawesome-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}

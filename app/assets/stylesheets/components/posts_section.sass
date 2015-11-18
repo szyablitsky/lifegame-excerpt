@@ -1,0 +1,100 @@
+.posts-section
+  > .posts-filter
+    float: right
+
+  > .loader
+    text-align: center
+
+.posts-filter
+  > .link
+    color: $hilight-color
+
+  > .-active
+    font-weight: bold
+
+.skills-report-form-container
+  margin-top: 0
+  margin-left: -$form-spacing
+  margin-right: -$form-spacing
+  margin-bottom: $form-spacing * 2
+  padding: $form-spacing
+  border-radius: 3px
+  background-color:  $background-hilight-color
+
+  > .form-message
+    text-align: center
+
+.form-message
+  > .link
+    cursor: pointer
+
+.user-related-block
+  > .avatar-container
+    width: 72px
+    height: 72px
+    border-radius: 50%
+    margin-right: $form-spacing
+    position: relative
+    display: inline-block
+    overflow: hidden
+
+  > .main-container
+    display: inline-block
+    vertical-align: top
+    width: 100%
+    margin-left: -100px
+    padding-left: 100px
+
+.avatar-container
+  > .avatar
+    width: 100%
+    height: auto
+    background-color: $background-hilight-more-color
+
+  > .level
+    position: absolute
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%)
+    padding: 0 8px
+    display: block
+    opacity: 0
+    background-color:  $background-color
+    background: linear-gradient(0deg, $background-color 0%, $background-hilight-color 100%)
+    border-radius: 3px
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25)
+    font-size: $small-font-size
+    transition: all 0.2s
+
+  &:hover
+    > .level
+      opacity: 1
+
+.posts-list
+  > .post-divider
+    height: 2px
+    background-color: $background-hilight-color
+    margin: $form-spacing 0
+
+.post-header
+  margin-bottom: 10px
+
+  > .author
+    display: inline
+    color: $hilight-color
+    font-weight: bold
+
+  > .time
+    display: inline
+    color: $light-color
+
+    > [class^="flaticon-"]:before
+      margin-right: 10px
+      font-size: 15px
+
+.post-content
+  font-size: 13px
+  line-height: 22px
+
+  > p
+    margin-bottom: 5px

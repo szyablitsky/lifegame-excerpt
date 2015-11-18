@@ -1,0 +1,19 @@
+.user-related-block
+  .avatar-container
+    = image_tag skills_report.author.decorate.normal_image_url, class: 'avatar'
+    .level = "lv #{skills_report.author.level}"
+  .main-container
+    .post-header
+      .author
+        = skills_report.author.full_name
+      .time
+        span.flaticon-circular210
+        = timeago_tag skills_report.created_at
+    .post-content
+      p Улучшил(а) навыки:
+      = render partial: 'skills_report_skills/skills_report_skill', collection: skills_report.skills_report_skills
+      = simple_format skills_report.content
+    - if self.controller.present? && logged_in?
+      == react_component 'CommentsBox', skills_report.decorate.comments_props(current_user), { id: "post-comments-#{skills_report.id}", prerender: false }
+
+.post-divider

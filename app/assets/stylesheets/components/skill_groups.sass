@@ -1,0 +1,29 @@
+.user-skills-container, .skills-map-container
+  > .skill-group-selector
+    display: flex
+    flex-wrap: wrap
+    border-bottom: 2px solid $background-hilight-more-color
+
+.skill-group-selector
+  > .skill-group-item
+    min-height: 36px
+    min-width: 46px
+    margin-bottom: 2px
+    padding: 0 8px
+    display: flex
+    justify-content: center
+    align-items: center
+    cursor: pointer
+    border-radius: 3px
+    transition: background-color 0.3s
+
+    &:hover
+      background: $background-hilight-color
+
+    &.-active
+      background: $background-hilight-more-color
+      cursor: inherit
+
+.skill-group-item
+  > .name
+    margin-left: 5px

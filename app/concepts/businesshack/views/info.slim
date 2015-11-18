@@ -1,0 +1,17 @@
+.businesshack-info
+  .businesshack-author-container
+    .avatar
+      = image_tag author_image
+    .author-info
+      .title Автор
+      .name = author_name
+  .tags
+    .title Тэги
+    .businesshack-tags-list
+      - tags.each do |tag|
+        .tag = tag
+  .social
+    .title &nbsp;
+    div
+      i.fa.fa-comments>
+      = comments_count

@@ -1,0 +1,45 @@
+.modal-backdrop
+  background-color: rgba(0, 0, 0, 0.85)
+  position: fixed
+  height: 100%
+  width: 100%
+  top: 0
+  z-index: 2
+
+  > .close
+    position: inherit
+    top: 5vh
+    left: 50%
+    transform: translate(-50%, 0)
+    cursor: pointer
+    // TODO: remove with bootstrap
+    opacity: 1
+
+.modal-content
+  text-align: center
+  z-index: 10000
+  position: fixed
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  // TODO: remove with bootstrap
+  background-color: transparent
+  // TODO: remove with landing styles
+  border: 0
+  box-shadow: none
+
+  > .title
+    font-size: 48px
+    margin-bottom: 20px
+    // TODO: move to parent after landing styles removal
+    color: $inverse-color
+
+  > .message
+    font-size: 22px
+    margin-bottom: 50px
+    // TODO: move to parent after landing styles removal
+    color: $inverse-color
+
+  // skill badge component override
+  > .skill-badge
+    margin-top: 20px

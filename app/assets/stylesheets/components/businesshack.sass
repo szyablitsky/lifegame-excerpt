@@ -1,0 +1,162 @@
+.businesshack
+  position: relative
+
+  .state
+    position: absolute
+    top: 11px
+    left: -14px
+    height: 8px
+    width: 8px
+    border-radius: 50%
+
+    &.-error
+      background-color: #f55
+    &.-saving
+      background-color: #09f
+    &.-changed
+      background-color: #dd0
+    &.-saved
+      background-color: #5f5
+
+  .title
+    font-size: 20px
+    font-weight: bold
+    text-transform: uppercase
+    color: $hilight-color
+    margin-bottom: 10px
+
+  .subtitle
+    font-size: 18px
+    font-style: italic
+    color: $form-color
+    margin-bottom: 10px
+
+  .additional-info
+    > .title
+      font-weight: $semi-bold
+      text-transform: inherit
+      font-size: inherit
+
+  input, textarea
+    width: 100%
+    border-width: 0
+
+  input::-webkit-input-placeholder
+    color: $error-color
+  input::-moz-placeholder
+    color: $error-color
+
+  textarea
+    padding: 0
+
+  ul
+    list-style: inherit
+    margin-bottom: 10px
+    margin-left: 40px
+
+  a > img
+    cursor: zoom-in
+
+    &:hover
+      outline: 1px solid rgba($accent-violet-color, 0.2)
+
+.businesshack-step
+  margin-top: 20px
+  position: relative
+  overflow: hidden
+
+  > .background-number
+    position: absolute
+    font-size: 190px
+    font-weight: bold
+    bottom: -10px
+    right: 20px
+    color: #e6e6e6
+
+  > .header
+    position: absolute
+    left: 0
+    top: 0
+    bottom: 0
+    width: 20px
+
+    &:hover
+      background-color: $background-hilight-more-color
+
+    > .state
+      position: static
+      margin: 8px 6px
+
+    > .delete
+      cursor: pointer
+      text-align: center
+
+      &:hover
+        font-weight: bold
+
+  > .title-container
+    display: flex
+    position: inherit
+
+    > .number
+      font-size: 20px
+      font-weight: $semi-bold
+      margin-right: 10px
+
+      &.-edit
+        position: relative
+        top: 3px
+
+    > .title
+      font-weight: normal
+      text-transform: none
+
+  > .content
+    position: inherit
+
+    > p:last-child
+      margin-bottom: 0
+
+  input, textarea
+    background-color: inherit
+
+.businesshack-steps-list
+  > .new-step
+    margin-top: 20px
+
+    > input
+      margin-bottom: 10px
+
+    > input::-webkit-input-placeholder
+      color: $light-color
+
+    > input::-moz-placeholder
+      color: $light-color
+
+.businesshack-tags-list
+  margin-right: -10px
+
+  > .tag
+    display: inline-block
+    margin-right: 10px
+    margin-bottom: 5px
+
+.businesshack-edit-link
+  margin-bottom: $internal-spacing
+
+.businesshack-state-form
+
+  .value
+    font-weight: bold
+
+  .action
+    cursor: pointer
+
+  &.-sending
+    opacity: 0.5
+
+    .action
+      cursor: inherit
+
+      &:hover
+        text-decoration: none

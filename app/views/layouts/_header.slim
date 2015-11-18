@@ -1,0 +1,18 @@
+.page-header
+  .collapse.navbar-collapse.header-content
+
+    - if logged_in?
+      #countdown.countdown.lf_tooltip (data-toggle="tooltip" data-placement="bottom"
+        data-title="Каждый день, который ты тратишь впустую, обратно уже не вернуть!")
+
+      .user-stats-container
+        - images = image_urls(['skill/report.png', 'skill/unlock.png'])
+        / TODO: get rid of ReactTooltip for server side rendering
+        = react_component 'UserStats', { initialState: @frontend_initial_state, images: images }, prerender: false
+
+    .user
+      - if logged_in?
+        == concept 'user/dropdown/cell', current_user
+      - else
+        .user__links
+          == concept 'user/links/cell'

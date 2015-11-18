@@ -1,0 +1,19 @@
+one:
+  name: Strength
+  description: The beauty of your body
+  price: 1
+
+two:
+  name: Agility
+  description: The beauty of your body
+  price: 1
+
+three:
+  name: Sila zemli
+  description: Sila zemli
+  price: 1
+
+named_skill:
+  name: Strength
+  description: The beauty of your body
+  price: 1

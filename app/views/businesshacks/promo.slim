@@ -1,0 +1,274 @@
+- provide :title, ' | Бизнесхаки'
+
+.businesshack-landing
+  .container.-full-width.businesshack-landing-title
+    .title Бизнесхак
+    .description
+      | База секретных инструментов предпринимателей
+      / br
+      / | годовая подписка
+  .container.-wide-column.businesshack-landing-hybrid
+    .capture-form.cta-target-1
+      = react_component 'CaptureForm', { user: @user, cta: 'Хочу доступ в клуб!' }
+    .title Это
+    .landing-row
+      .column-wide-3
+        .landing-number 01
+        div
+          b> Закрытый клуб единомышленников
+          | для предпринимателей и маркетологов. Тем, что есть у нас, не делятся в статьях и на форумах. Кладезь ценной информации!
+      .column-wide-3
+        .landing-number 02
+        div
+          b> Обмен опытом
+          p Пользуйтесь готовыми хаками и делитесь своим опытом. Общайтесь в чате, комментируйте, задавайте вопросы.
+            Получайте самую актуальную информацию в мире маркетинга и бизнеса.
+      .column-wide-3
+        .landing-number 03
+        div
+          b> База проверенных инструментов с руководством к действию
+          p Получите годовой доступ к уникальной базе инструментов, созданной на основе реального опыта маркетологов и предпринимателей.
+            Обычно в бизнесе используется от 3 до 5 стандартных маркетинговых схем.
+            Мы же создаём и храним сотни уникальных «чит-кодов», которые собирались годами!
+  .container.-full-width.businesshack-landing-history
+    .history-block
+      .title История
+      .description
+        | Мы заметили, что каждый член нашей тусовки обладает набором уникальных фишек и схем работы.
+          Начали активно собирать их в единую базу, к которой имели доступ только участники клуба.
+          Так появился клуб бизнес-хакеров. Все эти знания и инструменты помогали нам активно двигаться вперёд,
+          а также обмениваться опытом и быть в тренде технологий маркетинга. Теперь мы решили расширить наш клуб,
+          и кратно увеличить количество участников. Для этого была разработана целая система.
+      .result Бизнесхак — это многолетний опыт сотен предпринимателей, собранный на одной площадке и постоянно пополняемый.
+      button.submit-button.-center.cta data-id='1' Стать частью коллективного разума!
+  .container.-narrow-column.businesshack-landing-description
+    .title Что такое хак и как он выглядит?
+    .description
+      | Хак — это подробное руководство, помогающее быстро и легко справиться с определёнными задачами в бизнесе и кратно увеличить поток клиентов.
+    .title Посмотрите пару примеров
+    .businesshack-examples
+      .businesshack-example
+        .picture data-id='2'
+          = image_tag 'https://lifegame.imgix.net/landing/businesshack/deserter.png?ixlib=rails-0.3.1&s=cef9726c445bd441ab86b0488f945d5e', width: '255px', height: '255px'
+          .show-me-more
+            = image_tag 'https://lifegame.imgix.net/landing/businesshack/magnifier.png?ixlib=rails-0.3.1&s=906faf2fcfbf0263c14e5d1122e00909', class: 'magnifier'
+        .name Дезертир
+      .businesshack-example
+        .picture data-id='3'
+          = image_tag 'https://lifegame.imgix.net/landing/businesshack/leadscanner.png?ixlib=rails-0.3.1&s=cb9206013e6a65a1dc2036bf70e88a69', width: '255px', height: '255px'
+          .show-me-more
+            = image_tag 'https://lifegame.imgix.net/landing/businesshack/magnifier.png?ixlib=rails-0.3.1&s=906faf2fcfbf0263c14e5d1122e00909', class: 'magnifier'
+        .name Лидсканер
+    .title Какие ещё бывают хаки
+    .landing-row
+      .column-narrow-2
+        .title-2 Дезертир
+        p Моментально начать работать с «горячими» клиентами ваших конкурентов и ничего не тратить на их привлечение (заплатит конкурент).
+      .column-narrow-2
+        .title-2 Целевая аудитория
+        p Точечно попасть в «сливки» своей целевой аудитории и кратно увеличить эффективность рекламной кампании без дополнительных затрат.
+    .landing-row
+      .column-narrow-2
+        .title-2 Живые отзывы
+        p Сделать отзывы на сайте живыми и тем самым значительно увеличить доверие со стороны клиента и конверсию.
+      .column-narrow-2
+        .title-2 Пока горячие
+        p Увеличить эффективность группы ВКонтакте в&nbsp;3&nbsp;раза.
+    .landing-row
+      .column-narrow-2
+        .title-2 Дни рождения
+        p Замотивировать клиента постоянно пользоваться услугами именно вашей компании.
+      .column-narrow-2
+        .title-2 Посоветуйте?
+        p Легко получить от одного клиента ещё пятерых.
+    .landing-row
+      .column-narrow-2
+        .title-2 Шпион
+        p
+          | Установить личность пользователя, который зашёл к вам на сайт и ничего не купил.
+            Написать ему и приятно его удивить. Это значительно увеличит конверсию сайта!
+      .column-narrow-2
+        .title-2 Стоматолог
+        p Разбудить «спящих клиентов», и заставить их к&nbsp;вам приехать.
+    .title Это лишь малая часть...
+    button.submit-button.-center.cta data-id='1' Хочу всех посмотреть
+  .container.-full-width.businesshack-landing-mac
+  .container.-narrow-column.businesshack-landing-how-to
+    .title Как начать пользоваться
+    .landing-row
+      .column-narrow-2
+        .landing-number 01
+        .title-2 Оплата
+        p Вы получите доступ к разделу «Бизнесхак» и непосредственно к клубу.
+      .column-narrow-2
+        .landing-number 02
+        .title-2 Изучение
+        p
+          | В вашем распоряжении окажется база готовых хаков. Для поиска есть удобная система фильтрации.
+            База будет постоянно нами обновляться.
+    .landing-row
+      .column-narrow-2
+        .landing-number 03
+        .title-2 Применение
+        p
+          | В каждом хаке есть простое руководство по применению и внедрению, вплоть до технического описания.
+            Задавайте вопросы в комментариях и закрытом чате.
+      .column-narrow-2
+        .landing-number 04
+        .title-2 Создание нового
+        p Если у вас есть уникальный опыт и интересный метод, вы можете создавать свои хаки и увеличивать общую базу.
+  .container.-full-width.businesshack-landing-reveal-secrets
+    .title Расскажем все
+    .description
+      | Мы, как братья Сафроновы, раскрываем лучшие «фокусы» предпринимательства.
+        Об этом не напишут в статьях и не всегда поделятся лично.
+        Мы собираем лучшие секреты маркетинга в одном месте и классифицируем их.
+    button.submit-button.-center.cta data-id='1' Раскрыть все секреты?
+  .container.-narrow-column.businesshack-landing-useful
+    .title Кто может вступить в клуб?
+    .segment-selector
+      .businesshack-segment data-id='0'
+        = image_tag 'user/segment0.png'
+        .indicator.-show
+        .name Предприниматели<br/>cо стажем
+      .businesshack-segment data-id='3'
+        = image_tag 'user/segment3.png'
+        .indicator
+        .name Маркетолаги, агентства, арбитражники
+      .businesshack-segment data-id='1'
+        = image_tag 'user/segment1.png'
+        .indicator
+        .name Начинающие предприни-<br/>матели и стартаперы
+    .segment-description.-show data-id='0'
+      | Есть набор проверенных схем и инструментов, но для победы над конкурентами нужно больше.
+        Новые результаты требуют новых подходов.
+    .segment-description data-id='3'
+      | Тут вы найдёте массу уникальных инструментов, которые сделают вас профессионалами своего дела.
+    .segment-description data-id='1'
+      | Бизнесхак&nbsp;— возможность для быстрого старта. Во-первых, это сообщество опытных предпринимателей,
+        с которыми можно посоветоваться. Во-вторых, это набор инструментов по привлечению клиентов.
+        По статистике, 90% начинающих проектов закрываются именно из-за неумелого маркетинга.
+  .container.-full-width.businesshack-landing-truobles
+    .narrow-column-block
+      .title Проблемы, которые мы решим
+      .landing-row
+        .column-narrow-2
+          .title-2 Конкуренты
+          p
+            | Конкуренты постоянно используют что-то новое и им нечем ответить. <b>Хрен знает как они это делают!</b>
+              Вы часто замечаете, что есть подобные схемы и инструменты, но непонятно, как они работают изнутри.
+        .column-narrow-2
+          .title-2 Делать по-новому
+          p Забуксовали и хотите выйти на новый уровень. Старыми методами невозможно достичь новых результатов. 
+      .landing-row
+        .column-narrow-2
+          .title-2 Окружение единомышленников
+          p
+            | Среди знакомых мало предпринимателей которые могут поделиться своим опытом.
+              А те, что есть, недостижимы или неохотно общаются на эту тему.
+        .column-narrow-2
+          .title-2 Тренинги быстро заканчиваются
+          p
+            | Прошли очередной курс, зарядились эмоциями и сдулись через месяц? Бизнесхак-сообщество работает
+              и обновляется <b>24</b> часа в сутки и <b>365</b> дней в году.
+      .landing-row
+        .column-narrow-2
+          .title-2 Баяны 
+          p 
+            | Все новые фишки, которые вы узнаёте попадают к вам из уст закомых, но они не всегда актуальны.
+              Зарабатывают первые. Хочется быть всегда в тренде технологий.
+        .column-narrow-2
+          .title-2 Вода
+          p
+            | Бизнес-форумы проходят всего раз в год, а 95% процентов информации там&nbsp;— вода!
+              Мы отбираем только лучшие инструменты привлечения клиентов.
+              А также прикладываем подробное руководство, чтобы минимизировать вопросы.
+      button.submit-button.-center.cta data-id='1' Быть первым
+  .container.-narrow-column.businesshack-landing-price
+    .title Цена
+    .description
+      | Средняя стоимость одного курса по маркетингу на рынке на сегодняшний день — <b>3500 руб</b>.
+        Сейчас в нашей базе #{@count} хаков. Нехитрые подсчёты показывают,
+        что её суммарная стоимость&nbsp;— около <strike>#{@count * 3_500}</strike> р.
+        Мы же предлагаем доступ на год всего за <b>4990</b> р.
+    .businesshack-price-switch
+      .option.-active data-price='low' Купить сейчас
+      .option data-price='high' Куплю позже
+    .only Годовая подписка всего
+    .price
+      span.value> 4990
+      span.rouble Р
+    .capture-form.cta-target-2
+      = react_component 'CaptureForm', { user: @user, cta: 'Приобрести по минимальной цене' }
+
+    / http://codepen.io/yoksel/pen/fsdbu      
+    / svg.svg-defs
+    /   defs
+    /     linearGradient#textgradient x1="0%" x2="0%" y1="0%" y2="100%"
+    /       stop stop-color="#999" offset="0%"
+    /       stop stop-color="#111" offset="100%"
+    /     pattern#pattern patternUnits='userSpaceOnUse' width='1280' height='1024' viewbox='0 0 200 300'
+    /       image xlink:href='https://lifegame.imgix.net/landing/businesshack/rouble.png?ixlib=rails-0.3.1&fm=jpg&s=dbb167ae7921fbc0ff6f1164d023a711' width='1280' height='1024'
+    / svg.businesshack-price-container
+    /   text x='0' y='200'
+    /     tspan.value> 4900
+    /     tspan.rouble Р
+  .container.-full-width.businesshack-landing-growth
+    .narrow-column-block
+      .title База постоянно растёт
+      .description
+        | За счёт добавления в базу новых хаков цена доступа к ней будет постоянно расти. 
+          Для тех, кто приобретает доступ сейчас, цена минимальна&nbsp;— <b>4990&nbsp;р.</b>
+          Чем больше база, тем больше её&nbsp;стоимость.
+      .description.-big
+        | Следущая цена&nbsp;— 9900&nbsp;р., при добавлении 30&nbsp;хаков,
+        br
+        | и 12&nbsp;900&nbsp;р., при добавлении 50-и
+  .container.-narrow-column.businesshack-landing-doubt
+    .title Окупается c первыми двумя клиентами
+    .description
+      ' Практика показала, что Бизнесхаки 
+      b> окупаются уже за первые сутки использования
+      | — за счёт эффективных маркетинговых инструментов, которые можно моментально применить практически в любом бизнесе.
+      br
+      br
+      ' Благодаря лишь только одному алгоритму, можно добиться успеха.
+      b Представьте, что будет, если вы получите доступ к целой базе!
+    button.submit-button.-center.cta data-id='2' Хочу это немедленно
+    
+
+javascript:
+  $('.businesshack-segment').on('mouseenter', function() {
+    var id = $(this).data('id')
+    $('.businesshack-segment').each(function(){
+      var segment = $(this)
+      var indicator = segment.children('.indicator')
+      if (segment.data('id') === id) {
+        indicator.addClass('-show')
+      } else {
+        indicator.removeClass('-show')
+      }
+    })
+    $('.segment-description').each(function() {
+      var description = $(this)
+      if (description.data('id') === id) {
+        description.addClass('-show')
+      } else {
+        description.removeClass('-show')
+      }
+    })
+  })
+
+  $('.businesshack-price-switch > .option').on('click', function() {
+    var option = $(this)
+    if (option.hasClass('-active')) return
+    $('.option').toggleClass('-active')
+    $('.only').toggleClass('-hidden')
+    var price = option.data('price') === 'low' ? '4990' : '9900'
+    $('.price > .value').text(price)
+  })
+
+  $('.cta').on('click', function() {
+    var id = $(this).data('id')
+    $('.cta-target-' + id)[0].scrollIntoView({ behavior: 'smooth'})
+  })

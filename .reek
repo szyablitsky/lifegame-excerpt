@@ -1,0 +1,15 @@
+---
+
+IrresponsibleModule:
+  enabled: false
+
+"app/controllers":
+  IrresponsibleModule:
+    enabled: false
+  NestedIterators:
+    max_allowed_nesting: 2
+"app/helpers":
+  IrresponsibleModule:
+    enabled: false
+  UtilityFunction:
+    enabled: false

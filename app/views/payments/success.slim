@@ -1,0 +1,16 @@
+h1 Поздравляем!
+
+- if @course.present?
+  p Теперь у вас есть доступ к курсу «#{@course.name}»
+  p
+    a> href="#{course_path(@course)}" Приступить
+    | к изучению курса.
+- else
+  p
+    | Вы оплатили годовую подписку на доступ в клуб «
+    = link_to 'Бизнесхаки', businesshacks_path
+    | ».
+
+javascript:
+  var path = "#{@course.present? ? course_path(@course) : businesshacks_path}";
+  setTimeout(function() { window.location = path }, 5000);

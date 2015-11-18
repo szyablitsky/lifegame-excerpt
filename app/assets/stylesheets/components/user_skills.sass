@@ -1,0 +1,61 @@
+.user-skills-list
+  position: relative
+
+  > .user-skill
+    position: relative
+    display: flex
+    margin: 16px 0
+
+    &.-disabled
+      opacity: 0.5
+
+      > .add
+
+    &:hover
+      &::before
+        content: ''
+        position: absolute
+        z-index: -1
+        top: -10px
+        right: -20px
+        bottom: -10px
+        left: -20px
+        box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.1)
+        border-bottom-right-radius: 3px
+        border-top-right-radius: 3px
+
+      &::after
+        content: ''
+        position: absolute
+        z-index: 1
+        width: 10px
+        top: -10px
+        bottom: -10px
+        left: -25px
+        background-color: $background-color
+
+  > .user-skill-info
+    position: absolute
+    right: 300px
+    width: 320px
+    padding: 20px
+    top: -10px
+    background-color: $background-color
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.1)
+    border-bottom-left-radius: 3px
+    border-top-left-radius: 3px
+
+.user-skill
+  > .name
+    flex: 1
+
+  > .add, .count
+    margin-left: 10px
+
+  > .add
+    cursor: pointer
+    align-self: flex-start
+
+  &.-disabled
+    > .add
+      cursor: inherit

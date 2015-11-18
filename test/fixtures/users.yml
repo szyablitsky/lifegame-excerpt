@@ -1,0 +1,35 @@
+one:
+  email: foo@bar.baz
+  first_name: foo
+  last_name: baz
+  birth_date: 1988-12-12
+  phone: +98765432112
+  salt: <%= salt = "asdasdastr4325234324sdfds" %>
+  crypted_password: <%= Sorcery::CryptoProviders::BCrypt.encrypt("secret", salt) %>
+  role: 0
+  skill_points: 1
+  business_age_limit: 60
+
+two:
+  email: two@bar.baz
+  first_name: two
+  last_name: baz
+  birth_date: 1988-12-12
+  phone: +12345678900
+  salt: <%= salt = "asdasdastr4325234324sdfds" %>
+  crypted_password: <%= Sorcery::CryptoProviders::BCrypt.encrypt("secret", salt) %>
+  role: 0
+  skill_points: 1
+  business_age_limit: 60
+
+admin:
+  email: admin@lifegame.bz
+  first_name: admin
+  last_name: admin
+  birth_date: 1990-01-01
+  phone: +98765432112
+  salt: <%= salt = "hjkhdfjhiurtigsdasdkldfio" %>
+  crypted_password: <%= Sorcery::CryptoProviders::BCrypt.encrypt("admin", salt) %>
+  role: 1
+  skill_points: 0
+  business_age_limit: 60

@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title Lifegame
+    meta content="width=device-width, height=device-height, initial-scale=1" name="viewport"
+    link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'
+    = stylesheet_link_tag 'user_details', media: 'all'
+    = render 'layouts/js_data'
+    = javascript_include_tag 'common'
+    = javascript_include_tag 'application'
+    = favicon_link_tag 'favicon.png'
+    = csrf_meta_tags
+    = growlyflash_static_notices
+
+  body.user-details-page
+    = render 'layouts/ya_counter'
+    .cover
+      header.header
+        .logo = image_tag 'logo.png', alt: 'Lifegame logo', class: 'image'
+        .tagline Веб-сервис по развитию личности и бизнеса
+    .main
+      .content
+        = yield

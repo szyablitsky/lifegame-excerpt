@@ -1,0 +1,35 @@
+ul.site-navigation
+  li.site-navigation-item class="#{active(posts_path)}"
+    = link_to posts_path, class: 'site-navigation-link'
+      i.fa.fa-user.site-navigation-icon
+      | Лента
+  li.site-navigation-item class="#{active(skills_path)}"
+    = link_to skills_path, class: 'site-navigation-link'
+      i.fa.fa-line-chart.site-navigation-icon
+      | Навыки
+  li.site-navigation-item class="#{active(promo_businesshacks_path)}"
+    = link_to sidebar_businesshacks_path, class: 'site-navigation-link'
+      i.fa.fa-briefcase.site-navigation-icon
+      | Бизнесхаки
+      .new новое
+  li.site-navigation-item
+    = link_to tools_path, class: 'site-navigation-link -disabled'
+      i.fa.fa-gears.site-navigation-icon
+      | Инструменты
+  li.site-navigation-item.-disabled
+    = link_to '/tasks', class: 'site-navigation-link -disabled'
+      i.fa.fa-bullseye.site-navigation-icon
+      | Цели и задачи
+  li.site-navigation-item class="#{active(courses_path)}"
+    = link_to courses_path, class: 'site-navigation-link'
+      i.fa.fa-graduation-cap.site-navigation-icon
+      | Статьи
+  li.site-navigation-item
+    = link_to '/community', class: 'site-navigation-link -disabled'
+      i.fa.fa-users.site-navigation-icon
+      | Сообщество
+  li.site-navigation-item
+    = link_to 'http://blog.lifegame.bz', class: 'site-navigation-link', target: '_blank'
+      i.fa.fa-bullhorn.site-navigation-icon
+      | Блог
+      .new новое

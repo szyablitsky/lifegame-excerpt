@@ -1,0 +1,21 @@
+.businesshack-header
+  .title
+    = title
+    - if updated_at > 5.days.ago
+      .badge.-new новый
+    - if demo? || (paid? && admin?)
+      .badge.-paid только для участников клуба
+    - if draft?
+      .badge.-draft черновик
+  .updated-at
+    ' Обновлено
+    = timeago_tag updated_at
+.subtitle = subtitle
+- if demo?
+  .additional-info
+    - if benefits?
+      .title Что даёт
+      == benefits
+    - if results?
+      .title Результаты
+      == results

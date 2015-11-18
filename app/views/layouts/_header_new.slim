@@ -1,0 +1,11 @@
+header.page-header role='banner'
+  .container.-wide-column
+    .menu-button
+      - if logged_in?
+        = link_to 'javascript:undefined', class: 'site-navigation-open' do
+          = image_tag 'menu-button.png'
+    .logo
+      = image_tag 'logo-header.png'
+    .user-info
+      - unless logged_in?
+        == concept 'user/links/cell', hide_signup: true

@@ -1,0 +1,74 @@
+.skill-unlock-container
+  margin: 0 -20px
+  padding: 20px
+  border-radius: 3px
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.1)
+
+.skill-unlock-form
+  > .status
+    margin-bottom: 0
+
+    > .message
+      font-size: 13px
+
+  > .unlock-section
+    margin-bottom: 0
+
+.skill-price
+  display: flex
+  align-content: top
+  margin-bottom: 10px
+
+  > .text
+    flex: 1
+
+  > .value
+    font-size: 36px
+
+    > .icon
+      margin-right: 10px
+      height: 26px
+
+      > img
+        height: 100%
+
+    > .number
+      position: relative
+      top: 4px
+
+.unlock-section
+  > .unlock-prompt
+    position: absolute
+    display: none
+    width: 320px
+    transform: translate(-20px, 40px)
+    padding: 20px
+    background: $background-color
+    border-radius: 5px
+    filter: drop-shadow(0 1px 3px rgba(0,0,0,0.5))
+
+    &::before
+      content: ''
+      position: absolute
+      width: 0
+      height: 0
+      left: calc(50% - 12px)
+      top: -12px
+      border-style: solid
+      border-width: 0 11.5px 12px 11.5px
+      border-color: transparent transparent #fff transparent
+
+    &.-open
+      display: block
+
+.unlock-prompt
+  > .message
+    text-align: center
+    margin-bottom: 10px
+
+  > .buttons
+    display: flex
+    justify-content: space-between
+
+    > .submit-button, > .cancel-button
+      width: 130px

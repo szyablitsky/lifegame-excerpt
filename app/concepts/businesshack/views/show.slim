@@ -1,0 +1,10 @@
+.businesshacks-list-item
+  - if demo?
+    .businesshack-demo
+      == render :preview
+  - else
+    = link_to model do
+      == render :preview
+  == render :info
+
+.divider

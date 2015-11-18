@@ -1,0 +1,15 @@
+section.content-author.highlighted-block
+  h1.title Автор
+  .author-info
+    .avatar
+      - if avatar.present?
+        = ix_image_tag avatar, w: 72, h: 72, fit: 'facearea', faceindex: 1, facepad: 2
+    .info
+      .name = name
+      .short-description = short_description
+      - unless description.blank?
+        .content-author-description-toggle
+          span.flaticon-clipboard66
+          span Подробнее
+  .content-author-description.hidden
+    == simple_format(description)

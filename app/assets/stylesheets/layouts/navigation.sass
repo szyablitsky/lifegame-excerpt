@@ -1,0 +1,111 @@
+.site-navigation-container
+  position: fixed
+  left: -255px
+  width: 255px
+  top: 0
+  bottom: 0
+  background: #4E4A86
+  background: linear-gradient(to bottom, #4E4A86 0%, #427192 100%)
+  opacity: 0
+  z-index: 2
+  transition: all 0.5s ease
+
+  &.-open
+    opacity: 1
+    left: 0
+
+  > .header
+    height: 70px
+
+.site-navigation-close
+  position: absolute
+  top: 20px
+  right: 20px
+  height: 30px
+  width: 30px
+  cursor: pointer
+  opacity: 0.4
+  transition: all 0.3s ease
+
+  &:hover
+    opacity: 0.6
+
+  &:before, &:after
+    content: ''
+    position: absolute
+    z-index: -1
+    background: #fff
+    transform: rotate(45deg)
+
+  &:before
+    left: 50%
+    width: 5%
+    height: 100%
+    margin-top: 2%
+
+  &:after
+    top: 50%
+    height: 5%
+    width: 100%
+    margin-left: 2%
+
+.site-navigation
+  overflow-y: auto
+  font-size: 15px
+  padding: 0
+  margin: 0
+  list-style: none
+
+.site-navigation-item
+  &.-active
+    background: #5a669c
+
+    > .site-navigation-link
+      color: $inverse-color
+
+.site-navigation-link
+  display: block
+  position: relative
+  padding-left: 10px
+  color: rgba(255, 255, 255, 0.8)
+  line-height: 45px
+  text-decoration: none
+
+  &.-disabled
+    color: rgba(255,255,255,0.4)
+
+  &:hover
+    color: $inverse-color
+    background: rgba(255,255,255,0.15)
+
+  > .new
+    font-size: 10px
+    line-height: 1
+    position: absolute
+    background-color: #474080
+    top: 14px
+    right: 20px
+    padding: 3px 5px 4px
+    border-radius: 3px
+
+.site-navigation-icon
+  vertical-align: top
+  width: 45px
+  font-size: 20px
+  line-height: 45px
+  text-align: center
+
+.site-navigation-overlay
+  position: fixed
+  top: 0
+  bottom: 0
+  width: 100%
+  right: -100%
+  z-index: 1
+  opacity: 0
+  background-color: rgba(0, 0, 0, 0.7)
+  transition: opacity 0.5s ease
+
+  &.-open
+    opacity: 1
+    right: 0

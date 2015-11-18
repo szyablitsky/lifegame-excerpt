@@ -1,0 +1,17 @@
+one:
+  title: test
+  subtitle: hack
+  author: two
+
+published:
+  title: test
+  subtitle: hack
+  author: two
+  draft: false
+
+free:
+  title: test
+  subtitle: hack
+  author: two
+  draft: false
+  free: true

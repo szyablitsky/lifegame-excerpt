@@ -1,0 +1,9 @@
+- number = "%02d" % step.position
+.businesshack-step.highlighted-block
+  .background-number = number
+  .title-container
+    .number = number + '.'
+    .title = step.title
+  - step_decorated = step.decorate
+  - if step_decorated.content?
+    .content == step_decorated.content

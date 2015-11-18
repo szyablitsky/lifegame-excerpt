@@ -1,0 +1,29 @@
+body
+  font-family: 'Open Sans', sans-serif
+  background-color: $footer-background-color
+  color: $main-color
+  font-size: 15px
+  line-height: 24px
+  position: relative
+
+.container
+  &.-full-width
+
+  &.-wide-column, &.-narrow-column
+    margin: 0 auto
+    padding: $layout-spacing
+
+  &.-wide-column
+    max-width: $wide-column
+
+  &.-narrow-column
+    max-width: $narrow-column
+
+.page-content
+  background-color: $content-background-color
+
+.highlighted-block
+  margin: 0 -20px
+  padding: 20px
+  border-radius: 3px
+  background-color: $background-hilight-color

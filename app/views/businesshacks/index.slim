@@ -1,0 +1,57 @@
+- provide :title, ' | Бизнесхаки'
+
+.content-adapter
+  .main-column
+    section.businesshacks-section
+      h1.title
+        div Бизнесхаки
+        .list-info
+          ' Показано #{@businesshacks.size} из #{@businesshacks.size}
+          ' |
+          span.sort сначала новые
+      .businesshacks-new
+        = link_to new_businesshack_path, class: 'businesshack-add-button' do
+          => image_tag 'plus-icon.png', class: 'icon'
+          | Добавить бизнесхак
+      .businesshacks-list
+        - @businesshacks.each do |businesshack|
+          == concept 'businesshack/cell', businesshack, user: current_user
+
+  .side-column
+    / section.businesshacks-filter
+    /   h1.title Фильтр
+    /   .filters
+    /     .filter
+    /       .option.-selected Платные
+    /       .option Бесплатные
+    /     - if current_user.admin?
+    /       .filter
+    /         .option Черновики
+    /         .option Опубликованные
+    /     .filter-title Тэги
+    /     .filter
+    - if @facade.show_payment_button?
+      section.businesshacks-payment
+        = link_to 'Вступить в клуб *', YandexKassa::URL.(@facade.order_to_pay), class: 'submit-button',
+                  onclick: "yaCounterReachGoal('BUSINESSHACK_DEMO_BUY'); return true;"
+        .payment-systems
+          = image_tag 'payment_systems.png', alt: 'платежные системы'
+        .payment-description
+          | * 4990 рублей (на 1 год)
+    section.businesshacks-members
+      h1.title
+        span Участники клуба
+        span.count = @facade.members_count
+      .businesshacks-members-list
+        - @facade.members.each do |user|
+          .businesshacks-member title="#{user.full_name}"
+            = image_tag user.decorate.normal_image_url(45, 45)
+
+javascript:
+  $(function() {
+    $('.businesshack-demo').on('click', function(e) {
+      if (e.target.nodeName !== 'IMG') {
+        $(this).children('.additional-info').slideToggle()
+      }
+    })
+  })

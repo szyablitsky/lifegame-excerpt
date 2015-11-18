@@ -1,0 +1,8 @@
+h1 Поздравляем!
+p
+  | Вы получили демонстрационный доступ в клуб «
+  = link_to 'Бизнесхаки', businesshacks_path
+  | ».
+
+javascript:
+  setTimeout(function() { window.location = "#{businesshacks_path}" }, 5000);

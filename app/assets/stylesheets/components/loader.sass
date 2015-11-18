@@ -1,0 +1,27 @@
+@function delay($interval, $count, $index)
+  @return ($index * $interval) - ($interval * $count)
+
+@keyframes line-scale
+  0%
+    transform: scaley(1.0)
+  50%
+    transform: scaley(0.4)
+  100%
+    transform: scaley(1.0)
+
+@mixin line-scale($n:5)
+  @for $i from 1 through $n
+    > div:nth-child(#{$i})
+      animation: line-scale 1s delay(0.1s, $n, $i) infinite cubic-bezier(.2,.68,.18,1.08)
+
+.loader
+  @include line-scale()
+
+  > div
+    display: inline-block
+    background-color: $second-color
+    border-radius: 2px
+    margin: 2px
+    width: 4px
+    height: 20px
+    animation-fill-mode: both

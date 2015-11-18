@@ -1,0 +1,170 @@
+.businesshacks-section
+  > .title
+    > .list-info
+      font-size: $small-font-size
+      font-weight: $semi-bold
+      color: $second-color
+
+      > .sort
+        color: $hilight-color
+
+.businesshacks-new
+  text-align: right
+  margin-top: -10px
+
+.businesshack-add-button
+  color: $inverse-color
+  font-size: $small-font-size
+  font-weight: bold
+  border-radius: 5px
+  background-color: $accent-violet-color
+  padding: 7px 15px
+
+  > .icon
+    position: relative
+    top: -2px
+
+  &:hover, &:focus
+    color: $inverse-color
+    text-decoration: none
+
+.businesshacks-list
+  > .businesshacks-list-item
+    margin-left: -$form-spacing
+    margin-right: -$form-spacing
+    padding: $form-spacing
+
+    &:hover
+      background-color: $background-hilight-more-color
+
+  > .divider
+    height: 2px
+    background-color: $background-hilight-color
+
+.businesshacks-list-item
+  > .businesshack-demo
+    cursor: pointer
+
+  > a
+    color: $main-color
+    text-decoration: none
+
+  ul
+    list-style-type: disc
+    margin-bottom: 10px
+    padding-left: 40px
+
+.businesshack-demo
+  > .additional-info
+    display: none
+
+    > .title
+      font-weight: $semi-bold
+      text-transform: inherit
+      font-size: inherit
+
+.businesshack-header
+  display: flex
+  justify-content: space-between
+
+  > .title
+    font-weight: bold
+
+    > .badge
+      font-size: $small-font-size
+      font-weight: normal
+      color: $inverse-color
+      border-radius: $small-border-radius
+      padding: 3px 6px 5px 5px
+      position: relative
+      top: -2px
+      margin-left: 10px
+
+      &.-draft
+        background-color: #aaaaaa
+
+      &.-new
+        background-color: #f19d2d
+
+      &.-paid
+        background-color: #6dde6d
+
+
+  > .updated-at
+    font-size: $small-font-size
+    font-weight: $semi-bold
+    color: $second-color
+
+.businesshack-info
+  display: flex
+
+  .title
+    font-weight: $semi-bold
+
+  > .tags
+    margin-left: $internal-spacing
+    flex: 1
+
+  > .social
+    margin-left: $internal-spacing
+    color: $second-color
+
+$avatar-size: 37px
+
+.businesshack-author-container
+  display: flex
+
+  > .avatar
+    height: $avatar-size
+    width: $avatar-size
+    border-radius: 50%
+    overflow: hidden
+    margin-right: 10px
+    align-self: flex-start
+    position: relative
+    top: 7px
+
+    > img
+      height: $avatar-size
+      width: $avatar-size
+
+.businesshacks-payment
+  text-align: center
+
+  > .submit-button
+    color: $inverse-color
+    line-height: 36px
+
+    &:hover
+      text-decoration: none
+
+  > .payment-systems
+    margin-top: 10px
+
+  > .payment-description
+    font-size: $small-font-size
+    color: $second-color
+    margin-top: 5px
+
+.businesshacks-members
+  > .title
+    > .count
+      font-weight: normal
+      color: $second-color
+
+.businesshacks-members-list
+  display: flex
+  flex-wrap: wrap
+  margin-right: -13px
+
+.businesshacks-member
+  width: 45px
+  height: 45px
+  border-radius: 50%
+  overflow: hidden
+  margin-right: 13px
+  margin-bottom: 15px
+
+  > img
+    width: 100%
+    height: auto

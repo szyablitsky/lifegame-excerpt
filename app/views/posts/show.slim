@@ -1,0 +1,10 @@
+- provide :title, ' | Лента'
+
+.content-adapter
+  = render 'shared/breadcrumbs'
+
+  .main-column
+    section.post-section
+      h1.title Сообщение
+      = render @post
+  .side-column

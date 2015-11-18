@@ -1,0 +1,15 @@
+.businesshack
+  .title = businesshack.title
+  .subtitle = businesshack.subtitle
+  - if businesshack.description?
+    .description == businesshack.description
+  - if businesshack.benefits?
+    .additional-info
+      .title Что даёт
+      == businesshack.benefits
+  - if businesshack.results?
+    .additional-info
+      .title Результаты
+      == businesshack.results
+  .businesshack-steps-list
+    = render businesshack.steps

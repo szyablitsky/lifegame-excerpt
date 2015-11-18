@@ -1,0 +1,6 @@
+javascript:
+  window.appData = { loggedIn: #{logged_in?} };
+  window.yaParams = {
+    'Тип визита': '#{logged_in? ? 'Пользователь' : 'Посетитель'}',
+    'Пользователь': '#{logged_in? ? current_user.id : 'Аноним'}'
+  }

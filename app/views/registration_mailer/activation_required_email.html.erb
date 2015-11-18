@@ -1,0 +1,21 @@
+<p>
+  Уважаемый(ая), <%= @user.full_name %>!
+</p>
+
+<p>
+  Вы успешно зарегистрировались на сайте www.lifegame.bz. Чтобы активировать свой аккаунт перейдите по
+  <%= link_to 'ссылке', activate_users_activation_url(@user.activation_token, next: @next) %>.
+</p>
+
+<p>
+  С уважением,<br />
+  команда LifeGame
+</p>
+
+<p style="color:#bababa;">
+  Компания «LifeGame». Воронеж, Челюскинцев ул., 101в <a href="http://lifegame.bz">http://lifegame.bz</a>, <a href="mailto:info@lifegame.bz">info@lifegame.bz</a>
+  <br />
+  Вы получили это письмо, потому что ваш email был указан при регистрации в проекте <a href="http://lifegame.bz">LifeGame</a>.
+  <br />
+  Если письмо пришло вам по ошибке, то просто удалите или проигнорируйте его.
+</p>

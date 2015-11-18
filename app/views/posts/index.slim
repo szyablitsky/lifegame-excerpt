@@ -1,0 +1,35 @@
+- provide :title, ' | Лента'
+
+- content_for :js_data do
+  = render 'js_data'
+
+.content-adapter
+  .main-column
+    section.posts-section
+      == concept 'post/filter/cell', params[:filter], user: current_user
+      h1.title Ваша лента
+      - if logged_in?
+        = react_component 'SkillsReportForm', @frontend_initial_state
+      - else
+        .skills-report-form-container
+          .form-message
+            => link_to 'Зарегистрируйтесь', 'javascript:void();', class: 'signup-link',
+                       onclick: "yaCounterReachGoal('SIGN_UP'); return true;"
+            | или
+            =< link_to 'войдите', 'javascript:void();', class: 'signin-link',
+                       onclick: "yaCounterReachGoal('SIGN_IN'); return true;"
+            | , чтобы поделиться своими достижениями или оставить комментарий
+      .posts-list
+        = render @posts
+  .side-column
+    - if logged_in?
+      section.user-resources
+        h1.title Ресурсы
+        - images = image_urls(['resource/energy.png', 'resource/money.png', 'resource/time.png'])
+        = react_component 'UserResources', { initialState: @frontend_initial_state, images: images }
+      section.user-skills
+        h1.title Навыки
+        - skill_group_images = (1..6).map { |i| "skill/group#{i}.png" }
+        - additional_images = ['resource/energy.png', 'resource/money.png', 'resource/time.png', 'skill/add.png']
+        - images = image_urls(skill_group_images.concat(additional_images))
+        = react_component 'UserSkills', { initialState: @frontend_initial_state, images: images }

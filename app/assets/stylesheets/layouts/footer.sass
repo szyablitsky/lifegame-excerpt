@@ -1,0 +1,31 @@
+.page-footer
+  > .container
+    padding-top: $internal-spacing-bigger
+    padding-bottom: $internal-spacing-bigger
+    font-size: $smaller-font-size
+
+    > .footer-row
+      display: flex
+      justify-content: space-between
+
+      &.-align-bottom
+        align-items: flex-end
+        margin-bottom: 10px
+
+    > .corso-link, > .copyright
+      text-align: center
+      margin-top: $internal-spacing
+
+.footer-row
+  > .column
+    flex-basis: 250px
+
+    &.-header
+      font-weight: bold
+
+    > .footer-link
+      color: $main-color
+      text-decoration: none
+
+      &:hover
+        text-decoration: underline

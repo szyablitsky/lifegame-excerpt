@@ -1,0 +1,21 @@
+.content-adapter
+  = render 'shared/breadcrumbs'
+
+  .main-column
+    section
+      h1.title Новый бизнесхак
+      = form_for @businesshack do |f|
+        div
+          = f.label :title
+        div
+          = f.text_field :title, size: 100
+        - if @businesshack.errors.messages.include? :title
+          div = @businesshack.errors.messages[:title].join(', ')
+        div
+          = f.label :subtitle
+        div
+          = f.text_field :subtitle, size: 100
+        - if @businesshack.errors.messages.include? :subtitle
+          div = @businesshack.errors.messages[:subtitle].join(', ')
+        div
+          = f.submit

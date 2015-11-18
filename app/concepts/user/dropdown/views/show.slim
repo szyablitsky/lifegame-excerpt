@@ -1,0 +1,36 @@
+.dropdown.user__dropdown
+  a.dropdown-toggle.user__data aria-expanded="false" data-toggle="dropdown" href="#" role="button"
+    .user__data_container
+      .user__data_detail
+        .user__name = user.full_name
+      .user__data_ico
+        - if avatar
+          = ix_image_tag avatar, w: 45, h: 45, fit: 'facearea', faceindex: 1, facepad: 2
+    span.caret
+
+  ul.dropdown-menu role="menu"
+    li
+      = link_to 'Профиль', users_edit_registration_path
+
+    - if admin?
+      li.divider
+      li = link_to 'Бизнесхаки', businesshacks_path
+      li = link_to 'Управление пользователями', manage_users_path
+      li = link_to 'Управление заказами', manage_orders_path
+      li = link_to 'Управление группами навыков', manage_skill_groups_path
+      / li = link_to 'Управление очками опыта', manage_skill_points_path
+      li = link_to 'Управление навыками', manage_skills_path
+      / li = link_to 'Управление группами юнитов', manage_business_unit_groups_path
+      / li = link_to 'Управление юнитами бизнеса', manage_business_units_path
+      li = link_to 'Управление типами курсов', manage_course_types_path
+      li = link_to 'Управление целевыми аудиториями', manage_target_audiences_path
+      li = link_to 'Управление курсами', manage_courses_path
+      / li = link_to 'Управление бейджами', manage_badges_path
+      li = link_to 'Управление эволюцией аватара', manage_user_character_evolutions_path
+      / li = link_to 'Управление вкладками бизнеса', manage_business_tabs_path
+      / li = link_to 'Управление подписчиками', manage_subscribers_path
+      li.divider
+
+    li.user__sign-out
+      i.fa.fa-sign-out
+      = link_to 'Выйти', users_session_path(user), method: :delete

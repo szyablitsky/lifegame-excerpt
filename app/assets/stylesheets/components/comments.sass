@@ -1,0 +1,103 @@
+.comments-container
+  margin-top: 20px
+  font-size: 12px
+  line-height: 1.5em
+
+.comments-header
+  padding-top: 5px
+  padding-bottom: 5px
+  background-color: $background-hilight-color
+  color: $second-color
+  text-align: center
+  cursor: pointer
+
+  &:hover
+    text-decoration: underline
+
+  > .loader
+    height: 18px
+
+    > div
+      height: 18px
+
+.comment
+  display: flex
+  padding: 10px 0
+  border-top: 1px solid $background-hilight-color
+  cursor: pointer
+
+  &.-author
+    cursor: inherit
+
+  p
+    margin-bottom: 5px
+
+.author-avatar
+  position: relative
+  top: 3px
+  border-radius: 50%
+  height: 50px
+  width: 50px
+  overflow: hidden
+  margin-right: 10px
+
+  > img
+    height: auto
+    width: 50px
+
+.comment-content
+  flex: 1
+
+  > .content
+    > p:last-child
+      margin-bottom: 0
+
+.comment-header
+  display: flex
+  justify-content: space-between
+  color: $second-color
+
+  .author-name
+    font-weight: bold
+    color: $hilight-color
+
+  .fa
+    margin: 0 10px
+
+.comment-footer
+  display: flex
+  justify-content: space-between
+
+  > .comment-info
+    color: $second-color
+
+.comment-form
+  position: relative
+  background: $background-hilight-color
+  padding: 10px
+
+  > textarea
+    width: 100%
+    outline: none
+
+  > .overlay
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background-color: rgba(255, 255, 255, 0.5)
+    display: none
+
+    &.-show
+      display: block
+
+  .submit-button
+    display: inline-block
+    font-size: 12px
+    padding: 0 10px
+    height: 25px
+    text-transform: none
+
+  .fa
+    margin: 0 10px

@@ -1,0 +1,148 @@
+.form-header
+  font-size: 20px
+  color: $light-color
+  margin-bottom: $form-spacing
+
+  > .action
+    font-weight: bold
+    color: $hilight-color
+
+  > .alternative
+    color: $light-color
+    text-decoration: none
+    border-bottom: dotted 2px $light-color
+    cursor: pointer
+
+.field-wrapper
+  margin-bottom: $form-spacing
+  display: inline-block
+  width: 100%
+  vertical-align: top
+
+  > .label
+    display: block
+    margin-bottom: 5px
+    color: $hilight-color
+
+    &.-half
+      @include tablet
+        display: inline-block
+        margin-bottom: 0
+        width: 50%
+
+  // this smells bad, but i do not know how to improve it right now
+  &.-error
+    > .input-field
+      color: $error-color
+      border-color: $input-error-border-color
+      background-color: $input-error-background-color
+
+  > .error
+    font-size: $small-font-size
+    color: $error-color
+
+  > .help
+    font-size: $small-font-size
+
+.form-control-non-bootstrap
+  box-sizing: border-box
+  height: 36px
+  outline: medium none
+  border-radius: 3px
+  font-size: inherit
+  font-family: inherit
+
+.input-field
+  @extend .form-control-non-bootstrap
+  width: 100%
+  padding: 0 10px
+  border: solid 1px $input-border-color
+  color: $hilight-color
+  // TODO: landing styles workaroud
+  background-color: white
+
+  // TODO: landing styles workaroud
+  &:focus
+    color: $hilight-color
+
+  &::-webkit-input-placeholder
+    color: $form-color
+  &::-moz-placeholder
+    color: $form-color
+
+  &.-half
+    @include tablet
+      width: 50%
+
+  &.-text-area
+    padding: 5px 10px
+    height: 100px
+
+.date-select
+  width: 100%
+
+  > .day, > .month, > .year
+    @extend .form-control-non-bootstrap
+    padding: 0 10px
+    border: solid 1px $input-border-color
+    margin-right: 10px
+    background-color: white
+
+  > .year
+    margin-right: 0
+
+.check-box
+
+  > .label
+    margin-left: 5px
+    // TODO: should be removed with bootstrap
+    margin-bottom: 0
+    font-weight: normal
+    color: $form-color
+    padding: 0
+    font-size: inherit
+
+@import 'range_control'
+
+.form-button
+  display: block
+  color: $button-color
+  font-size: 13px
+  text-transform: uppercase
+  font-weight: bold
+  border-width: 0
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.42)
+  padding: 0 30px
+
+.submit-button
+  @extend .form-control-non-bootstrap
+  @extend .form-button
+  background: linear-gradient(0deg, #31D557 0%, #34E15D 100%)
+
+  &:hover
+    opacity: 0.8
+
+  // TODO: landing styles workaroud
+  &:focus
+    color: $button-color
+
+  &.-stretch
+    width: 100%
+
+  &.-center
+    margin: 0 auto
+
+  &.-right
+    float: right
+
+  &.-disabled
+    opacity: 0.5
+    cursor: inherit
+
+.cancel-button
+  @extend .form-control-non-bootstrap
+  @extend .form-button
+  background: linear-gradient(0deg, #2B2B2B 0%, #555555 100%)
+
+  &:hover
+    opacity: 0.8

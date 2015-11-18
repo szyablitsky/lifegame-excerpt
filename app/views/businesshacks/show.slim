@@ -1,0 +1,19 @@
+.content-adapter
+  = render 'shared/breadcrumbs'
+
+  .main-column
+    = render 'businesshack', businesshack: @businesshack
+    #comments
+    = react_component 'CommentsBox', @comments_props
+  .side-column
+    == concept 'content_author/cell', @businesshack.author
+    section.businesshack-tags
+      h1.title Тэги
+      .businesshack-tags-list
+        - @businesshack.tags.map(&:name).each do |tag|
+          .tag = tag
+    - if current_user.admin? || @businesshack.author == current_user
+      .businesshack-edit-link = link_to 'редактировать', edit_businesshack_path(@businesshack)
+    - if current_user.admin?
+      - state_props = { businesshack: @businesshack_state_attributes }
+      = react_component 'BusinesshackStateForm', state_props

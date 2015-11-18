@@ -1,0 +1,67 @@
+.tag
+  font-size: $small-font-size
+  font-style: italic
+  height: 20px
+  line-height: 20px
+  padding: 0 10px
+  border-radius: 10px
+  background: #e8edff
+
+.react-tagsinput
+  display: flex
+  flex-wrap: wrap
+  box-sizing: border-box
+  padding: 3px 5px
+  outline: medium none
+  border: solid 1px $input-border-color
+  border-radius: 3px
+  font-size: inherit
+  font-family: inherit
+
+  > .react-tagsinput-tag
+    @extend .tag
+    margin: 3px 5px
+
+  > .typeahead
+    position: relative
+
+    > .react-tagsinput-input
+      font-size: $small-font-size
+      font-style: italic
+      height: 20px
+      line-height: 20px
+      padding: 0 10px
+      margin: 3px 5px
+      border: none
+      outline: none
+
+    > .typeahead-matches
+      position: absolute
+      border: solid 1px $input-border-color
+      background: $background-color
+      width: 100%
+
+      > .variant
+        font-size: $small-font-size
+        font-style: italic
+        height: 20px
+        line-height: 20px
+        padding: 0 10px
+
+        &.-selected
+          background-color: $background-hilight-more-color
+
+        &:hover
+          background-color: $background-hilight-color
+          cursor: pointer
+
+.react-tagsinput-tag
+  > a
+    font-size: $small-font-size
+    font-weight: bold
+    text-decoration: none
+    color: inherit
+    cursor: pointer
+
+    &:before
+      content: ' ×'

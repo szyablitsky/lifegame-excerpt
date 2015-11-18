@@ -1,0 +1,20 @@
+<h1>Смена пароля</h1>
+
+<p>
+  Уважаемый(ая), <%= @user.full_name %>! Вы запросили смену пароля.
+</p>
+
+<p>
+  Чтобы поменять пароль, перейдите по <%= link_to 'ссылке', edit_users_password_reset_url(@user.reset_password_token) %>.
+</p>
+
+<p>
+  С уважением,<br/>
+  команда LifeGame
+</p>
+
+<p style="color:#bababa;">
+  Компания «LifeGame». Воронеж, Челюскинцев ул., 101в <a href="http://lifegame.bz">http://lifegame.bz</a>, <a href="mailto:info@lifegame.bz">info@lifegame.bz</a>
+  <br/>
+  Если вы не запрашивали смену пароля или письмо пришло вам по ошибке, то просто удалите или проигнорируйте его.
+</p>

@@ -1,0 +1,118 @@
+// control ----------------------------
+
+input[type=range].range-field
+  -webkit-appearance: none
+  width: 100%
+  margin: 4px 0 10px
+
+input[type=range].range-field:focus
+  outline: none
+
+input[type=range].range-field::-webkit-slider-runnable-track
+  width: 100%
+  height: 8px
+  cursor: pointer
+  background: #dae4e8
+  border-radius: 4px
+  border: 0px solid rgba(1, 1, 1, 0)
+
+input[type=range].range-field::-webkit-slider-thumb
+  position: relative
+  border: 0px solid #000000
+  height: 16px
+  width: 16px
+  border-radius: 5px
+  background: #4e4a86
+  cursor: pointer
+  -webkit-appearance: none
+  margin-top: -4px
+
+input[type=range].range-field:focus::-webkit-slider-runnable-track
+  background: #e7edf0
+
+input[type=range].range-field::-moz-range-track
+  width: 100%
+  height: 8px
+  cursor: pointer
+  background: #dae4e8
+  border-radius: 4px
+  border: 0px solid rgba(1, 1, 1, 0)
+
+input[type=range].range-field::-moz-range-thumb
+  position: relative
+  border: 0px solid #000000
+  height: 16px
+  width: 16px
+  border-radius: 5px
+  background: #4e4a86
+  cursor: pointer
+
+input[type=range].range-field::-ms-track
+  width: 100%
+  height: 8px
+  cursor: pointer
+  background: transparent
+  border-color: transparent
+  color: transparent
+
+input[type=range].range-field::-ms-fill-lower
+  background: #cddbe0
+  border: 0px solid rgba(1, 1, 1, 0)
+  border-radius: 8px
+
+input[type=range].range-field::-ms-fill-upper
+  background: #dae4e8
+  border: 0px solid rgba(1, 1, 1, 0)
+  border-radius: 8px
+
+input[type=range].range-field::-ms-thumb
+  border: 0px solid #000000
+  height: 16px
+  width: 16px
+  border-radius: 5px
+  background: #4e4a86
+  cursor: pointer
+  height: 8px
+
+input[type=range].range-field:focus::-ms-fill-lower
+  background: #dae4e8
+
+input[type=range].range-field:focus::-ms-fill-upper
+  background: #e7edf0
+
+input[type=range].range-field::-webkit-slider-thumb:before
+  position: absolute
+  bottom: 2px
+  left: 50%
+  width: 10px
+  height: 10px
+  border-radius: 2px
+  transform: translate(-50%, 50%) rotate(45deg)
+  background: #4e4a86
+  content: ''
+
+// legend -----------------------------
+
+.range-legend
+  > .min, .value, .max
+    display: inline-block
+    vertical-align: top
+    color: $form-color
+    font-size: 16px
+    font-weight: bold
+    width: 30%
+
+  > .value
+    margin-top: -1px
+    color: $hilight-color
+    font-size: 25px
+    text-align: center
+    width: 40%
+    > .unit
+      font-size: 14px
+      margin-left: 7px
+      position: relative
+      top: -11px
+
+  > .max
+    text-align: right

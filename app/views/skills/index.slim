@@ -1,0 +1,32 @@
+- provide :title, ' | Навыки'
+
+.content-adapter
+  .main-column
+    section.skills-section
+      .title
+        h1
+          | Навыки
+          span.help-show class="#{current_user.dismissed_help.include?('skills') ? '' : 'hidden'}" ?
+        a.out-link.lf_tooltip (href='https://docs.google.com/forms/d/1WZEs2Sy2RjF4zmNmVPBYmTSEb5Q1K7wfPWdPfIx3m6E/viewform?usp=send_form'
+          target="_blank" data-toggle="tooltip" data-placement="bottom"
+          data-title="Знаете еще какой-то навык полезный предпринимателю или для личностного роста? Поделитесь с нами своей идеей.")
+          | Предложить навык
+      .help-block_non_bs class="#{current_user.dismissed_help.include?('skills') ? 'hidden' : ''}"
+        .help-close data-help='skills' ×
+        p Изначально у вас есть 10 очков, которые вы можете потратить на открытие навыков. Каждый навык имеет определенную стоимость.
+          С каждым новым уровнем вы будете получать еще одно очко открытия навыков.
+        p
+          | Открытые навыки можно использовать в ежедневном отчете в
+          =< link_to 'ленте', posts_path
+          | .
+        p Навыки еще находятся в стадии активного заполнения. Практически каждый день мы добавляем что-то новое. Следите за обновлениями.
+        p.dimmed Выбор навыков не работает в IE и Safari. Используйте любой современный браузер — Chrome, FireFox, Opera или Edge
+      - images = image_urls((1..6).map { |i| "skill/group#{i}.png" } << 'skill/lock.png' << 'skill/default.png')
+      = react_component 'SkillsMap', { initialState: @frontend_initial_state, images: images }
+  .side-column
+    section.skill-details
+      h1.title &nbsp;
+      - images = image_urls(['skill/unlock.png', 'resource/time.png', 'resource/energy.png', 'resource/money.png'])
+      = react_component 'SkillUnlockForm', { initialState: @frontend_initial_state, images: images }
+    section.balance-wheel
+      = react_component 'UserBalanceWheel', @frontend_initial_state

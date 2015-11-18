@@ -1,0 +1,66 @@
+.user-details-page
+  margin: 0
+  height: 100%
+  font-family: 'PT Sans', 'Open Sans', sans-serif
+
+  > .cover
+    height: 180px
+    overflow: hidden
+    background: #000
+    background-image: url(https://lifegame.s3.amazonaws.com/img/landing/bg_shuttle.jpg)
+    background-position: center
+    background-size: cover
+
+    @include iphone
+      height: 100px
+
+    @include desktop
+      position: fixed
+      top: 0
+      left: 0
+      width: 38%
+      height: 100vh
+      display: block
+      background-position: 75% center
+
+  > .main
+    @include desktop
+      margin-left: 38%
+      min-height: 100vh
+
+.cover
+  > .header
+    width: 320px
+    margin: 30px auto
+
+    @include iphone
+      width: 250px
+      position: inherit
+      transform: inherit
+
+    @include desktop
+      position: fixed
+      left: 19%
+      top: 40%
+      transform: translateX(-50%)
+
+.header
+  > .logo
+
+    > .image
+      width: 100%
+
+  > .tagline
+    color: #fff
+    font-size: 18px
+    text-align: center
+
+    @include iphone
+      display: none
+
+.main
+  > .content
+    padding: 20px 0
+
+    @include desktop
+      padding: 10% 0

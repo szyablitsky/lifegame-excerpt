@@ -1,0 +1,30 @@
+footer.page-footer role='contentinfo'
+  .container.-wide-column
+    .footer-row.-align-bottom
+      .column
+        = image_tag 'logo-footer.png'
+      .column.-header Контакты
+      .column.-header Полезно
+      .column.-header Социальные сети
+    .footer-row
+      .column
+        div Понравилась идея? Поделись!
+        = render 'layouts/ya_share'
+      .column
+        | г. Воронеж, ул. Челюскинцев 101В
+        br
+        = link_to 'info@lifegame.bz', 'mailto:info@lifegame.bz', class: 'footer-link'
+      .column
+        = link_to 'Что такое LIFEGAME', root_path, target: '_blank', class: 'footer-link'
+        br
+        = link_to 'Блог проекта', 'http://blog.lifegame.bz', target: '_blank', class: 'footer-link'
+      .column
+        = link_to 'ВКонтакте', 'https://vk.com/lifegamevk', target: '_blank', class: 'footer-link'
+        br
+        | Следи за новостями в социльных сетях
+    .copyright © 2015 LIFEGAME
+    .corso-link
+      | Разработка сайта
+      br
+      = link_to 'http://corsoagency.info/', target: '_blank' do
+        = image_tag 'corso.png'

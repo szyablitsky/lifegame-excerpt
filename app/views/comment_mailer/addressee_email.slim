@@ -1,0 +1,18 @@
+p Уважаемый(ая), #{@addressee.full_name}!
+
+p #{@comment_author.full_name} ответил на ваш комментарий:
+blockquote = simple_format(@comment_content)
+p = link_to 'ответить', @commentable_link
+
+p С уважением,<br />команда LifeGame
+p style='color:#bababa;'
+  ' Компания «LifeGame». Воронеж, Челюскинцев ул., 101в
+  a href='https://www.lifegame.bz' style='color:#bababa;' http://lifegame.bz
+  ' ,
+  a href='mailto:info@lifegame.bz' style='color:#bababa;' info@lifegame.bz
+  br
+  ' Вы получили это письмо, потому что ваш email был указан при регистрации в проекте
+  a href='https://www.lifegame.bz' style='color:#bababa;' LifeGame
+  | .
+  br
+  | Если письмо пришло вам по ошибке, то просто удалите или проигнорируйте его.
