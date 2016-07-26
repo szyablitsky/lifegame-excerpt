@@ -1,0 +1,8 @@
+export const CHANGE = 'CHANGE'
+
+export const ADDRESSEE_SET = 'ADDRESSEE_SET'
+export const ADDRESSEE_REMOVE = 'ADDRESSEE_REMOVE'
+
+export const SUBMIT_START = 'SUBMIT_START'
+export const SUBMIT_SUCCESS = 'SUBMIT_SUCCESS'
+export const SUBMIT_FAILURE = 'SUBMIT_FAILURE'

@@ -1,0 +1,118 @@
+.form
+  background-color: $bg-white
+  border: 1px solid $border-gray
+  border-radius: $border-radius
+
+  @media (min-width: 980px)
+    width: 980px
+
+.header
+  margin: 60px 0 50px
+  text-align: center
+  font-size: 30px
+
+.title
+  font-weight: 500
+  color: $color-green
+
+.subtitle
+  color: $color-header
+
+.user
+  background-color: $bg-body
+  display: flex
+  height: 120px
+  justify-content: center
+  align-items: center
+
+.avatar
+  width: 38px
+  height: 38px
+  border-radius: 100%
+  margin-right: 15px
+
+.name
+  font-size: 18px
+  color: $color-text
+
+.paymentTypesContainer
+  margin: 25px 0 36px
+
+.price
+  margin-bottom: 30px
+  color: $color-button-primary
+  font-weight: 500
+  text-align: center
+
+.types
+  display: flex
+  justify-content: space-between
+  width: 720px
+  margin: 0 auto
+
+.type
+  display: flex
+  justify-content: space-between
+  align-items: center
+  width: 220px
+  height: 66px
+  padding: 0 15px
+  border: 1px solid $border-gray
+  border-radius: $border-radius
+  cursor: pointer
+
+.labelContainer
+  display: inline-flex
+  align-items: center
+
+.radio
+  display: none
+
+.indicator
+  position: relative
+  min-width: 20px
+  height: 20px
+  border: 1px solid $border-gray
+  border-radius: 100%
+  margin-right: 15px
+
+  &::after
+    content: ''
+    position: absolute
+    top: 5px
+    left: 5px
+    width: 8px
+    height: 8px
+    border-radius: 100%
+
+  &.active::after
+    background-color: $bg-primary
+
+.label
+  color: $color-gray
+
+.icons
+  display: inline-flex
+  align-items: center
+
+.icon
+  display: flex
+  margin-left: 5px
+
+.buttons
+  display: flex
+  justify-content: center
+  margin-bottom: 48px
+
+.button
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 180px
+  height: 48px
+  background-color: $bg-primary
+  color: $color-white
+  font-weight: 500
+  font-size: 18px
+  border: none
+  border-radius: 24px

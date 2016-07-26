@@ -1,0 +1,54 @@
+.container
+  display: flex
+  align-items: flex-start
+  padding: 20px 30px
+  background: $bg-white
+  border: 1px solid $border-gray
+  border-radius: $border-radius
+  margin-bottom: 20px
+
+.avatar
+  max-height: 38px
+  max-width: 38px
+  border-radius: 100%
+  margin-right: 15px
+
+.main
+  flex: 1
+
+.header
+  display: flex
+  justify-content: space-between
+
+.author
+  color: $color-primary
+  font-weight: 500
+
+.addressee
+  color: $color-default
+  font-weight: 300
+
+.timeago
+  font-size: 12px
+  margin-bottom: 5px
+
+.reply
+  color: $color-gray
+  font-size: 12px
+  font-weight: 500
+  cursor: pointer
+  transition: color 0.2s ease
+
+  &:hover
+    color: $color-text
+
+.content
+  color: $color-gray
+  font-size: 16px
+
+  > p
+    margin-top: 0
+    margin-bottom: 5px
+
+  > p:last-child
+    margin-bottom: 0

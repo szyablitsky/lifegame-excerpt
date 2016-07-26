@@ -1,0 +1,35 @@
+@keyframes ball-beat
+  50%
+    opacity: 0.2
+    transform: scale(0.75)
+  100%
+    opacity: 1
+    transform: scale(1)
+
+$ball-size: 15px
+
+.loader
+  display: flex
+  align-items: center
+
+.ball
+  display: inline-block
+  width: $ball-size
+  height: $ball-size
+  border-radius: 100%
+  margin: 2px
+  animation: ball-beat 0.9s 0s infinite linear
+  animation-fill-mode: both
+
+  &:nth-child(2)
+    animation-delay: 0.15s !important
+
+  &:nth-child(3)
+    animation-delay: 0.3s !important
+
+
+.white
+  background: $bg-white
+
+.primary
+  background: $color-button-primary

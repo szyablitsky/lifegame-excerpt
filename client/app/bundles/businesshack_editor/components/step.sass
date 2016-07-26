@@ -1,0 +1,42 @@
+.title
+  display: flex
+
+.input
+  flex: 1
+  position: relative
+  top: -3px
+  width: 100%
+  border: 1px dashed transparent
+
+  &:focus
+    border-color: #e6e6e6
+
+.controls
+  position: absolute
+  display: flex
+  top: 20px
+  right: 20px
+  z-index: 1
+
+  @media (min-width: 960px)
+    top: 0
+    left: calc(100% + 20px)
+    right: inherit
+
+@import button
+
+.button
+  +button
+  color: #e6e6e6
+  transition: all 0.2s ease
+
+  &:hover
+    color: #1a1a1a
+
+  &.disabled:hover
+    color: #e6e6e6
+    border-color: #e6e6e6
+    cursor: default
+
+    > i
+      cursor: default

@@ -1,0 +1,44 @@
+.container
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: $bg-modal-overlay
+  z-index: 200
+
+$close-container-size: 108px
+$close-size: 20px
+
+.close
+  position: absolute
+  top: 0px
+  right: 0px
+  width: $close-container-size
+  height: $close-container-size
+  cursor: pointer
+
+  &:hover::before,
+  &:hover::after,
+    transition: background-color 0.3s ease
+    background-color: darken($color-button-default, 20%)
+
+  &::before,
+  &::after
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%) rotate(45deg)
+    content: ''
+    background-color: $color-button-default
+
+  &::before
+    width: $close-size
+    height: 1px
+
+  &::after
+    width: 1px
+    height: $close-size
